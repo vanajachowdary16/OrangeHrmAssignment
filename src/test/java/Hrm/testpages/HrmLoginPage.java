@@ -15,13 +15,13 @@ public class HrmLoginPage extends HRMBaseTest{
 	public HrmLoginPage(WebDriver driver) {
         this.driver = driver;
     }
-	public void login(String uname, String pwd) {
+	public static void login(String uname, String pwd) {
 		driver.findElement(userNameLocator).sendKeys(uname);
 		 driver.findElement(passwordLocator).sendKeys(pwd);
 		 driver.findElement(loginBtn).click();	    
 
 	}
-	public String getTitle() {
+	public static String getTitle() {
 		return driver.getTitle();
 	}
 	

@@ -23,38 +23,37 @@ public class PIMPageObjects extends HRMBaseTest{
 	
 	
 	
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	public PIMPageObjects(WebDriver driver) {
 	this.driver=driver;
 	}
 	
-	public void pimNavigation() {
+	public static void pimNavigation() {
 		driver.findElement(pimXpath).click();
 				
 	}
-	public void addemp() {
+	public static void addemp() {
 		
 		wait.until(ExpectedConditions.elementToBeClickable(addEmp)).click();
 	}
-	public void save() {
+	public static void save() {
 		
 		wait.until(ExpectedConditions.elementToBeClickable(saveButton)).click();		
 	}
-	public void seeDetails() {
+	public static void seeDetails() {
 		wait.until(ExpectedConditions.elementToBeClickable(userdetailsPage)).click();	
 		
 	}
 	
-	 
-	 
-	public void addEmployee(String Fname, String Mname, String Lname) {
+	public static void addEmployee(String Fname, String Mname, String Lname) {
+		pimNavigation();
 		addemp();
 		driver.findElement(firstNameLocator).sendKeys(Fname);
 		driver.findElement(middleNameLocator).sendKeys(Mname);
 		driver.findElement(lastNameLocator).sendKeys(Lname);
-		driver.findElement(saveButton).click();
 		save();
 		seeDetails();
+		
 	}
 	
 
