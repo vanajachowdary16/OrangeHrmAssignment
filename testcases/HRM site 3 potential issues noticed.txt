@@ -1,0 +1,7 @@
+3 potential issues noticed
+-------------------------------------
+1. The employee records or data retrieved from the database keep changing frequently, which makes it difficult to validate test results consistently. For example, when you query the Employee List, some employees may appear or disappear unexpectedly.
+
+2. After submitting the "Forgot your password?" request, the user remains on the same page with no option to return to the login page or proceed further. This creates confusion about the next step.
+
+3.The OrangeHRM demo site does not provide a feature to create new user accounts. As a result, testing is limited to using the default Admin account.
