@@ -2,7 +2,10 @@ package Hrm.testpages;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -44,8 +47,15 @@ public class EmployeeListPage extends HRMBaseTest{
 	  
 	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".oxd-loading-spinner-container")));
 
-	 List<WebElement> rows = container.findElements(By.xpath(".//div[text()='First (& Middle) Name']/following-sibling::div[@class='data']"));
+	 List<WebElement> rows = driver.findElements(By.xpath("//div[contains(@class,'oxd-table-row')]/div[3]"));
 	 System.out.println(rows.size());
+	 Set<String> names = new LinkedHashSet<>();
+	 for(WebElement e : rows) {
+		
+		 names.add(e.getText());
+		 
+	 }
+	 System.out.println(names);
 	}
 
 
