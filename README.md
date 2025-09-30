@@ -24,11 +24,6 @@ src/test/java/Hrm
 testng.xml # TestNG suite file
 pom.xml # Maven dependencies & plugins
 
-## Setup Instructions  
-
-1. Clone the repository:  
-   ```bash
-   git clone <repo-url>
 
 **Test Scenarios Covered**
 
