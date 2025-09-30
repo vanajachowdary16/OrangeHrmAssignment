@@ -4,10 +4,8 @@ import java.util.Set;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import Hrm.testpages.EmployeeListPage;
@@ -17,25 +15,17 @@ import Hrm.testutils.HRMBaseTest;
 
 public class EmpListVerifyTest extends HRMBaseTest {
 
-
     @BeforeClass
     public void setUp() {
         HRMBaseTest.LaunchBrowser();
         driver = HRMBaseTest.getDriver();
         HrmLoginPage.login("Admin", "admin123");
     }
-   /* @BeforeMethod
-    public void loginSession() {
-    	HrmLoginPage.login("Admin", "admin123");
-    }
-    @AfterMethod
-    public void logoutSession() {
-    	EmployeeListPage.logOut();
-    }*/
+
     @AfterClass
     public void tearDown() {
-    	EmployeeListPage.logOut();
-      driver.quit();
+        EmployeeListPage.logOut();
+        driver.quit();
     }
 
     @DataProvider(name = "employeeData")
@@ -49,24 +39,26 @@ public class EmpListVerifyTest extends HRMBaseTest {
 
     @Test(dataProvider = "employeeData")
     public void addEmployee(String firstname, String middlename, String lastname) {
-    	
-    	PIMPageObjects.addEmployee(firstname, middlename, lastname);
-    	
+        PIMPageObjects.addEmployee(firstname, middlename, lastname);
     }
 
     @Test(dataProvider = "employeeData", dependsOnMethods = "addEmployee")
     public void validateEmployee(String firstname, String middlename, String lastname) throws InterruptedException {
-    	PIMPageObjects.pimNavigation();
-    	EmployeeListPage.navigateToEmpList();
+        // Navigate to Employee List
+        PIMPageObjects.pimNavigation();
+        EmployeeListPage.navigateToEmpList();
         Set<String> employeesInUI = EmployeeListPage.getAllEmployeesFromUI();
 
-        String expectedName = buildDisplayedName(firstname, middlename, lastname); 
-        // ⚠ Adjust this method to match UI, e.g., first + middle only if last name is empty in UI
+        // Build expected display name
+        String expectedName = buildDisplayedName(firstname, middlename, lastname);
 
-        Assert.assertTrue(
-            employeesInUI.contains(expectedName),
-            "Employee not found in UI list: " + expectedName + "\nAll Employees: " + employeesInUI
-        );
+        // Check and print message
+        if (employeesInUI.contains(expectedName)) {
+            System.out.println("Name Verified: " + expectedName);
+        } else {
+            Assert.fail("Employee not found in UI list: " + expectedName 
+                       + "\nAll Employees: " + employeesInUI);
+        }
     }
 
     private String buildDisplayedName(String first, String middle, String last) {
@@ -74,11 +66,6 @@ public class EmpListVerifyTest extends HRMBaseTest {
         if (middle != null && !middle.trim().isEmpty()) {
             name.append(" ").append(middle);
         }
-        // Only append last name if your UI shows it
-        // if (last != null && !last.trim().isEmpty()) {
-        //     name.append(" ").append(last);
-        // }
         return name.toString().trim();
     }
-
 }
