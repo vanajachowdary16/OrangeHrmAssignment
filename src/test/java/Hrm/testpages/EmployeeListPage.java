@@ -19,44 +19,75 @@ import Hrm.testutils.HRMBaseTest;
 public class EmployeeListPage extends HRMBaseTest{
 	public final static By pimXpath= By.xpath("//span[text()='PIM']");
 	public final static By empList=By.linkText("Employee List");
+	public final static By userDropDown=By.xpath("//p[@class='oxd-userdropdown-name']");
+	public final static By logout= By.xpath("//a[text()='Logout']");
+	
+	
 	//public final static By findlist = 
 			//By.xpath("//div[text()='First (& Middle) Name']//following::div[@class='data']");
 	public final static By results=By.xpath("//span[@class='oxd-text oxd-text--span']");
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	public EmployeeListPage(WebDriver driver) {
 		this.driver=driver;
 	}
 
-	public void pimNavigation() {
+	public static void pimNavigation() {
 		driver.findElement(pimXpath).click();
 				
 	}
-	public void navigateToEmpList() {
+	public static  void navigateToEmpList() {
 		wait.until(ExpectedConditions.elementToBeClickable(empList)).click();
 	}
+	public static void clickUserDropDown() {
+		wait.until(ExpectedConditions.elementToBeClickable(userDropDown)).click();
+	}
+	public static void clickLogout() {
+		wait.until(ExpectedConditions.elementToBeClickable(logout)).click();
+	}
+	
+	public static void logOut() {
+		clickUserDropDown();
+		clickLogout();
+	}
+	
 	
 	public final static By targetDiv = By.xpath("//div[@class='orangehrm-container']");
 	
 	public final static By findlist = 
 			By.xpath(".//div[text()='First (& Middle) Name']/following-sibling::div[@class='data']");
 	
-	public void getUserList() {
-	    WebElement container = driver.findElement(targetDiv);
-	    js.executeScript("arguments[0].scrollIntoView();", container);
-	  
-	    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".oxd-loading-spinner-container")));
+	
+	
+	public static Set<String> getAllEmployeesFromUI() throws InterruptedException {
+	    Set<String> employees = new LinkedHashSet<>();
+	    boolean hasNextPage = true;
 
-	 List<WebElement> rows = driver.findElements(By.xpath("//div[contains(@class,'oxd-table-row')]/div[3]"));
-	 System.out.println(rows.size());
-	 Set<String> names = new LinkedHashSet<>();
-	 for(WebElement e : rows) {
-		
-		 names.add(e.getText());
-		 
-	 }
-	 System.out.println(names);
+	    while (hasNextPage) {
+	        List<WebElement> rows = driver.findElements(
+	            By.xpath("//div[contains(@class,'oxd-table-row')]/div[3]")
+	        );
+	        for (WebElement row : rows) {
+	            String name = row.getText().trim();
+	            if (!name.equalsIgnoreCase("First (& Middle) Name") && !name.isEmpty()) {
+	                employees.add(name);
+	            }
+	        }
+
+	        // Check next page button
+	        List<WebElement> nextBtns = driver.findElements(By.xpath("//button[@class='oxd-pagination-page-item oxd-pagination-next']"));
+	        if (!nextBtns.isEmpty() && nextBtns.get(0).isEnabled()) {
+	            nextBtns.get(0).click();
+	            Thread.sleep(1000); // wait for new page load
+	        } else {
+	            hasNextPage = false;
+	        }
+	    }
+
+	    return employees;
 	}
+
+
 
 
 	}
