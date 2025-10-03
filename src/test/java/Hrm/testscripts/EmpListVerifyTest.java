@@ -31,9 +31,8 @@ public class EmpListVerifyTest extends HRMBaseTest {
     @DataProvider(name = "employeeData")
     public Object[][] getEmployeeData() {
         return new Object[][] {
-            {"Vanu2", "Test3", "Automation"},
-            {"John2", "Doe2", "Developer"},
-            {"Jane2", "Smith2", "Tester2"}
+            {"Vanu2", "Test3", "Automation"}
+            
         };
     }
 

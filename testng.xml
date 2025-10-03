@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite">
+<listeners>
+<listener class-name="Hrm.testutils.HrmListener">
+</listener>
+</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="Hrm.testscripts.HrmLoginTest"/>
+      <class name="Hrm.testscripts.PIMNavigationTest"/>
+      <class name="Hrm.testscripts.EmpListVerifyTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
