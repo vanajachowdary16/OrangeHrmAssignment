@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="5" failed="1" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-02T21:54:51 IST" name="Suite" finished-at="2025-10-02T21:55:52 IST" duration-ms="61263">
+    <groups>
+    </groups>
+    <test started-at="2025-10-02T21:54:51 IST" name="Test" finished-at="2025-10-02T21:55:52 IST" duration-ms="61263">
+      <class name="Hrm.testscripts.PIMNavigationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Hrm.testscripts.PIMNavigationTest@1a677343]" started-at="2025-10-02T21:55:02 IST" name="setUp" finished-at="2025-10-02T21:55:07 IST" duration-ms="4677" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logintest()[pri:0, instance:Hrm.testscripts.PIMNavigationTest@1a677343]" started-at="2025-10-02T21:55:07 IST" name="logintest" finished-at="2025-10-02T21:55:11 IST" duration-ms="3540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logintest -->
+        <test-method signature="addEmployee(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Hrm.testscripts.PIMNavigationTest@1a677343]" started-at="2025-10-02T21:55:11 IST" name="addEmployee" data-provider="employeeData" finished-at="2025-10-02T21:55:20 IST" depends-on-methods="Hrm.testscripts.PIMNavigationTest.logintest" duration-ms="9482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vanu2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Automation]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method signature="addEmployee(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Hrm.testscripts.PIMNavigationTest@1a677343]" started-at="2025-10-02T21:55:20 IST" name="addEmployee" data-provider="employeeData" finished-at="2025-10-02T21:55:31 IST" depends-on-methods="Hrm.testscripts.PIMNavigationTest.logintest" duration-ms="10944" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[John2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Doe2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Developer]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method signature="addEmployee(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Hrm.testscripts.PIMNavigationTest@1a677343]" started-at="2025-10-02T21:55:31 IST" name="addEmployee" data-provider="employeeData" finished-at="2025-10-02T21:55:41 IST" depends-on-methods="Hrm.testscripts.PIMNavigationTest.logintest" duration-ms="9837" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Jane2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Smith2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Tester2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Hrm.testscripts.PIMNavigationTest@1a677343]" started-at="2025-10-02T21:55:41 IST" name="tearDown" finished-at="2025-10-02T21:55:42 IST" duration-ms="796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Hrm.testscripts.PIMNavigationTest -->
+      <class name="Hrm.testscripts.HrmLoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Hrm.testscripts.HrmLoginTest@3b0090a4]" started-at="2025-10-02T21:54:51 IST" name="setUp" finished-at="2025-10-02T21:55:01 IST" duration-ms="9736" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginPageTest()[pri:0, instance:Hrm.testscripts.HrmLoginTest@3b0090a4]" started-at="2025-10-02T21:55:01 IST" name="loginPageTest" finished-at="2025-10-02T21:55:02 IST" duration-ms="1240" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Hrm.testscripts.HrmLoginTest@3b0090a4]" started-at="2025-10-02T21:55:02 IST" name="tearDown" finished-at="2025-10-02T21:55:02 IST" duration-ms="249" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Hrm.testscripts.HrmLoginTest -->
+      <class name="Hrm.testscripts.EmpListVerifyTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Hrm.testscripts.EmpListVerifyTest@15de0b3c]" started-at="2025-10-02T21:55:42 IST" name="setUp" finished-at="2025-10-02T21:55:47 IST" duration-ms="5491" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="addEmployee(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Hrm.testscripts.EmpListVerifyTest@15de0b3c]" started-at="2025-10-02T21:55:47 IST" name="addEmployee" data-provider="employeeData" finished-at="2025-10-02T21:55:50 IST" duration-ms="3035" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Vanu2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Automation]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchSessionException">
+            <message>
+              <![CDATA[Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {using=link text, value=Add Employee}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\godug\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59651}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59651/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, findElement {using=link text, value=Add Employee}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\godug\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59651}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59651/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
+at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+at Hrm.testpages.PIMPageObjects.addemp(PIMPageObjects.java:37)
+at Hrm.testpages.PIMPageObjects.addEmployee(PIMPageObjects.java:50)
+at Hrm.testscripts.EmpListVerifyTest.addEmployee(EmpListVerifyTest.java:41)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method signature="validateEmployee(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:Hrm.testscripts.EmpListVerifyTest@15de0b3c]" started-at="2025-10-02T21:55:50 IST" name="validateEmployee" finished-at="2025-10-02T21:55:50 IST" depends-on-methods="Hrm.testscripts.EmpListVerifyTest.addEmployee" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method Hrm.testscripts.EmpListVerifyTest.validateEmployee() on instance Hrm.testscripts.EmpListVerifyTest@15de0b3c depends on not successfully finished methods 
+[Hrm.testscripts.EmpListVerifyTest.addEmployee() on instance Hrm.testscripts.EmpListVerifyTest@15de0b3c]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method Hrm.testscripts.EmpListVerifyTest.validateEmployee() on instance Hrm.testscripts.EmpListVerifyTest@15de0b3c depends on not successfully finished methods 
+[Hrm.testscripts.EmpListVerifyTest.addEmployee() on instance Hrm.testscripts.EmpListVerifyTest@15de0b3c]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEmployee -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Hrm.testscripts.EmpListVerifyTest@15de0b3c]" started-at="2025-10-02T21:55:50 IST" name="tearDown" finished-at="2025-10-02T21:55:52 IST" duration-ms="1731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Hrm.testscripts.EmpListVerifyTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
