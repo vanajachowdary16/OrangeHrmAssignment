@@ -6,6 +6,14 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="Hrm.testscripts.PIMNavigationTest">
+        <methods>
+          <include name="addEmployee"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="logintest"/>
+        </methods>
+      </class> <!-- Hrm.testscripts.PIMNavigationTest -->
       <class name="Hrm.testscripts.EmpListVerifyTest">
         <methods>
           <include name="addEmployee" invocation-numbers="0"/>
