@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods, 1 failed,  1 skipped,  5 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,  2 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -106,6 +106,11 @@
                         <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.EmpListVerifyTest" class="method navigator-link" hash-for-method="addEmployee(Vanu2, Test3, Automation)">addEmployee(Vanu2, Test3, Automation)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.PIMNavigationTest" class="method navigator-link" hash-for-method="logintest">logintest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
@@ -115,6 +120,11 @@
                       <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
                     </span>
                     <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.PIMNavigationTest" class="method navigator-link" hash-for-method="addEmployee">addEmployee</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="skipped.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.EmpListVerifyTest" class="method navigator-link" hash-for-method="validateEmployee">validateEmployee</a> <!-- method navigator-link -->
@@ -131,27 +141,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.PIMNavigationTest" class="method navigator-link" hash-for-method="addEmployee(John2, Doe2, Developer)">addEmployee(John2, Doe2, Developer)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.PIMNavigationTest" class="method navigator-link" hash-for-method="addEmployee(Vanu2, Test3, Automation)">addEmployee(Vanu2, Test3, Automation)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.PIMNavigationTest" class="method navigator-link" hash-for-method="addEmployee(Jane2, Smith2, Tester2)">addEmployee(Jane2, Smith2, Tester2)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.HrmLoginTest" class="method navigator-link" hash-for-method="loginPageTest">loginPageTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="Hrm.testscripts.PIMNavigationTest" class="method navigator-link" hash-for-method="logintest">logintest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -169,6 +159,44 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">Hrm.testscripts.PIMNavigationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="logintest">
+                  </a> <!-- logintest -->
+                  <span class="method-name">logintest</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=141.0.7390.54)
+Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6fea330976e9e2f2b3972b9a398ab865, clickElement {id=f.69DE9C85EF4315B10601FAF7D2128650.d.6E324A143D2543D4A1D57CEB9D5AC5E2.e.32}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.54, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: C:\Users\godug\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:65513}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:65513/devtoo..., se:cdpVersion: 141.0.7390.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (6fea330976e9e2f2b3972b9a398ab865)] -&gt; xpath: //span[text()=&apos;PIM&apos;]]
+Session ID: 6fea330976e9e2f2b3972b9a398ab865
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at Hrm.testpages.PIMPageObjects.pimNavigation(PIMPageObjects.java:32)
+	at Hrm.testscripts.PIMNavigationTest.logintest(PIMNavigationTest.java:41)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">Hrm.testscripts.EmpListVerifyTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -178,35 +206,54 @@
                   </a> <!-- addEmployee(Vanu2, Test3, Automation) -->
                   <span class="method-name">addEmployee</span>
                   <span class="parameters">(Vanu2,Test3,Automation)</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=141.0.7390.54)
 Build info: version: &apos;4.35.0&apos;, revision: &apos;1c58e5028b&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [null, findElement {using=link text, value=Add Employee}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.208, chrome: {chromedriverVersion: 140.0.7339.207 (17230b545fd..., userDataDir: C:\Users\godug\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:59651}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59651/devtoo..., se:cdpVersion: 140.0.7339.208, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:176)
+Command: [bb7c61a1d71c99e4ba2afcea10816021, clickElement {id=f.7D37130D11709CD3B240636B0F5B0811.d.8708980E73DAA4F9C237959FD2364B92.e.33}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.54, chrome: {chromedriverVersion: 141.0.7390.54 (b95610d5c4a5..., userDataDir: C:\Users\godug\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52889}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52889/devtoo..., se:cdpVersion: 141.0.7390.54, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (bb7c61a1d71c99e4ba2afcea10816021)] -&gt; xpath: //span[text()=&apos;PIM&apos;]]
+Session ID: bb7c61a1d71c99e4ba2afcea10816021
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
-	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:627)
-	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:624)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-	at Hrm.testpages.PIMPageObjects.addemp(PIMPageObjects.java:37)
-	at Hrm.testpages.PIMPageObjects.addEmployee(PIMPageObjects.java:50)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at Hrm.testpages.PIMPageObjects.pimNavigation(PIMPageObjects.java:32)
+	at Hrm.testpages.PIMPageObjects.addEmployee(PIMPageObjects.java:49)
 	at Hrm.testscripts.EmpListVerifyTest.addEmployee(EmpListVerifyTest.java:41)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 25 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">Hrm.testscripts.PIMNavigationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="addEmployee">
+                  </a> <!-- addEmployee -->
+                  <span class="method-name">addEmployee</span>
+                  <div class="stack-trace">java.lang.Throwable: Method Hrm.testscripts.PIMNavigationTest.addEmployee() on instance Hrm.testscripts.PIMNavigationTest@6c7a164b depends on not successfully finished methods 
+[Hrm.testscripts.PIMNavigationTest.logintest() on instance Hrm.testscripts.PIMNavigationTest@6c7a164b]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -218,8 +265,8 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
                   <a name="validateEmployee">
                   </a> <!-- validateEmployee -->
                   <span class="method-name">validateEmployee</span>
-                  <div class="stack-trace">java.lang.Throwable: Method Hrm.testscripts.EmpListVerifyTest.validateEmployee() on instance Hrm.testscripts.EmpListVerifyTest@15de0b3c depends on not successfully finished methods 
-[Hrm.testscripts.EmpListVerifyTest.addEmployee() on instance Hrm.testscripts.EmpListVerifyTest@15de0b3c]
+                  <div class="stack-trace">java.lang.Throwable: Method Hrm.testscripts.EmpListVerifyTest.validateEmployee() on instance Hrm.testscripts.EmpListVerifyTest@4c2bb6e0 depends on not successfully finished methods 
+[Hrm.testscripts.EmpListVerifyTest.addEmployee() on instance Hrm.testscripts.EmpListVerifyTest@4c2bb6e0]
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 18 stack frames
 </div> <!-- stack-trace -->
@@ -227,45 +274,6 @@ Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 1
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Hrm.testscripts.PIMNavigationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="addEmployee(John2, Doe2, Developer)">
-                  </a> <!-- addEmployee(John2, Doe2, Developer) -->
-                  <span class="method-name">addEmployee</span>
-                  <span class="parameters">(John2,Doe2,Developer)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addEmployee(Vanu2, Test3, Automation)">
-                  </a> <!-- addEmployee(Vanu2, Test3, Automation) -->
-                  <span class="method-name">addEmployee</span>
-                  <span class="parameters">(Vanu2,Test3,Automation)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="addEmployee(Jane2, Smith2, Tester2)">
-                  </a> <!-- addEmployee(Jane2, Smith2, Tester2) -->
-                  <span class="method-name">addEmployee</span>
-                  <span class="parameters">(Jane2,Smith2,Tester2)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="logintest">
-                  </a> <!-- logintest -->
-                  <span class="method-name">logintest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -338,40 +346,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(7);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addEmployee')
+data.setCell(0, 1, 'logintest')
 data.setCell(0, 2, 'Hrm.testscripts.PIMNavigationTest')
-data.setCell(0, 3, 10944);
+data.setCell(0, 3, 7358);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'addEmployee')
-data.setCell(1, 2, 'Hrm.testscripts.PIMNavigationTest')
-data.setCell(1, 3, 9837);
+data.setCell(1, 2, 'Hrm.testscripts.EmpListVerifyTest')
+data.setCell(1, 3, 6556);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'addEmployee')
-data.setCell(2, 2, 'Hrm.testscripts.PIMNavigationTest')
-data.setCell(2, 3, 9482);
+data.setCell(2, 1, 'loginPageTest')
+data.setCell(2, 2, 'Hrm.testscripts.HrmLoginTest')
+data.setCell(2, 3, 1855);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'logintest')
-data.setCell(3, 2, 'Hrm.testscripts.PIMNavigationTest')
-data.setCell(3, 3, 3540);
+data.setCell(3, 1, 'validateEmployee')
+data.setCell(3, 2, 'Hrm.testscripts.EmpListVerifyTest')
+data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'addEmployee')
-data.setCell(4, 2, 'Hrm.testscripts.EmpListVerifyTest')
-data.setCell(4, 3, 3035);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'loginPageTest')
-data.setCell(5, 2, 'Hrm.testscripts.HrmLoginTest')
-data.setCell(5, 3, 1240);
-data.setCell(6, 0, 6)
-data.setCell(6, 1, 'validateEmployee')
-data.setCell(6, 2, 'Hrm.testscripts.EmpListVerifyTest')
-data.setCell(6, 3, 0);
+data.setCell(4, 2, 'Hrm.testscripts.PIMNavigationTest')
+data.setCell(4, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 38 seconds</span>
+              <span class="suite-total-time">Total running time: 15 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -404,55 +404,47 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">loginPageTest</span>
-                <span class="method-start">9774 ms</span>
+                <span class="method-start">5012 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11036 ms</span>
+                <span class="method-start">6957 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Hrm.testscripts.PIMNavigationTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">11291 ms</span>
+                <span class="method-start">7108 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">logintest</span>
-                <span class="method-start">15969 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">addEmployee(Vanu2, Test3, Automation)</span>
-                <span class="method-start">19526 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">addEmployee(John2, Doe2, Developer)</span>
-                <span class="method-start">29013 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">addEmployee(Jane2, Smith2, Tester2)</span>
-                <span class="method-start">39960 ms</span>
+                <span class="method-start">10656 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">49800 ms</span>
+                <span class="method-start">18189 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">Hrm.testscripts.EmpListVerifyTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">50597 ms</span>
+                <span class="method-start">18560 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">addEmployee(Vanu2, Test3, Automation)</span>
-                <span class="method-start">56091 ms</span>
+                <span class="method-start">23065 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">59146 ms</span>
+                <span class="method-start">29797 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
